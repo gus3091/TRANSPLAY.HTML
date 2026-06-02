@@ -7,16 +7,32 @@
 </head>
 <body class="bg-[#FCFCFA] text-[#0B172A] font-sans">
 
-    <nav class="flex justify-between items-center py-6 px-12 bg-[#0B172A] text-white">
-        <div class="text-2xl font-bold"> Transpayy</div>
-        <div class="space-x-8 text-sm font-medium">
-            <a href="index.html" class="hover:text-orange-400">Inicio</a>
-            <a href="caracteristicas.html" class="hover:text-orange-400">Características</a>
-            <a href="comofunciona.html" class="hover:text-orange-400">Cómo funciona</a>
-            <a href="choferes.html" class="text-orange-400">Choferes</a>
-            <a href="testimonios.html" class="hover:text-orange-400">Testimonios</a>
+    <nav class="bg-[#0B172A] p-6 text-white">
+        <div class="flex justify-between items-center max-w-7xl mx-auto">
+            <div class="text-2xl font-bold">Transplayy</div>
+
+            <div class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <a href="index.html" class="hover:text-orange-400">Inicio</a>
+                <a href="presentacion.html" class="hover:text-orange-400">Presentación</a>
+                <a href="caracteristicas.html" class="hover:text-orange-400">Características</a>
+                <a href="comofunciona.html" class="hover:text-orange-400">Cómo funciona</a>
+                <a href="choferes.html" class="text-orange-400 font-bold border-b border-orange-400">Choferes</a>
+                <a href="testimonios.html" class="hover:text-orange-400">Testimonios</a>
+                <a href="descarga.html" class="bg-orange-500 px-5 py-2 rounded-full font-bold hover:bg-orange-600">Descargar</a>
+            </div>
+
+            <button id="menuBtn" class="md:hidden text-white text-3xl">☰</button>
         </div>
-        <a href="http://192.168.1.6:8080/descarga.html" class="bg-orange-500 px-6 py-2 rounded-full font-bold hover:bg-orange-600">Descargar gratis</a>
+
+        <div id="mobileMenu" class="hidden md:hidden flex flex-col space-y-4 mt-4 text-center border-t border-slate-700 pt-4">
+            <a href="index.html" class="block">Inicio</a>
+            <a href="presentacion.html" class="block">Presentación</a>
+            <a href="caracteristicas.html" class="block">Características</a>
+            <a href="comofunciona.html" class="block">Cómo funciona</a>
+            <a href="choferes.html" class="block text-orange-400 font-bold">Choferes</a>
+            <a href="testimonios.html" class="block">Testimonios</a>
+            <a href="descarga.html" class="block bg-orange-500 py-2 rounded-full font-bold mx-8">Descargar</a>
+        </div>
     </nav>
 
     <section class="py-16 text-center">
@@ -35,7 +51,7 @@
                     <p class="text-sm opacity-80">Carlos Mendoza · Chofer verificado, Bogotá</p>
                 </div>
             </div>
-            <div class="absolute top-10 -right-10 bg-white p-6 rounded-2xl shadow-xl w-64">
+            <div class="absolute top-10 -right-4 md:-right-10 bg-white p-6 rounded-2xl shadow-xl w-60 md:w-64">
                 <div class="flex justify-between items-center mb-4">
                     <span class="text-xs text-gray-500">Panel de hoy</span>
                     <span class="text-[10px] text-green-500 font-bold bg-green-100 px-2 py-0.5 rounded-full">● Activo</span>
@@ -72,14 +88,17 @@
             <span class="bg-green-600 px-4 py-1 rounded-full text-xs font-bold">● Registro rápido</span>
             <h2 class="text-4xl font-bold mt-6 mb-12">Del celular al volante en 24 horas</h2>
             
-            <div class="flex justify-center gap-4">
-                <a href="/descarga.html" class="bg-green-500 px-8 py-4 rounded-xl font-bold hover:bg-green-400 text-black">✓ Únete como chofer — Es gratis</a>
-                <a href="/descarga.html" class="border border-green-600 px-8 py-4 rounded-xl font-bold hover:bg-green-800">📱 Descargar la app</a>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="descarga.html" class="bg-green-500 px-8 py-4 rounded-xl font-bold hover:bg-green-400 text-black">✓ Únete como chofer — Es gratis</a>
+                <a href="descarga.html" class="border border-green-600 px-8 py-4 rounded-xl font-bold hover:bg-green-800">📱 Descargar la app</a>
             </div>
         </div>
     </section>
 
-   
-
+    <script>
+        const btn = document.getElementById('menuBtn');
+        const menu = document.getElementById('mobileMenu');
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+    </script>
 </body>
 </html>

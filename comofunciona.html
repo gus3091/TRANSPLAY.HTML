@@ -7,17 +7,36 @@
 </head>
 <body class="bg-[#FCFCFA] text-[#0B172A] font-sans">
 
-    <!-- NAVBAR -->
-    <nav class="flex justify-between items-center py-6 px-12 bg-[#0B172A] text-white">
-        <div class="text-2xl font-bold">Transpayy</div>
-        <div class="space-x-8 text-sm font-medium">
-            <a href="index.html" class="hover:text-orange-400">Inicio</a>
-            <a href="caracteristicas.html" class="hover:text-orange-400">Características</a>
-            <a href="comofunciona.html" class="text-orange-400">Cómo funciona</a>
-            <a href="choferes.html" class="hover:text-orange-400">Choferes</a>
-            <a href="testimonios.html" class="hover:text-orange-400">Testimonios</a>
+    <!-- NAVBAR ACTUALIZADO -->
+    <nav class="bg-[#0B172A] p-6 text-white">
+        <div class="flex justify-between items-center max-w-7xl mx-auto">
+            <div class="text-2xl font-bold">Transplayy</div>
+
+            <!-- Menú Escritorio -->
+            <div class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <a href="index.html" class="hover:text-orange-400">Inicio</a>
+                <a href="presentacion.html" class="hover:text-orange-400">Presentación</a>
+                <a href="caracteristicas.html" class="hover:text-orange-400">Características</a>
+                <a href="comofunciona.html" class="text-orange-400 font-bold border-b border-orange-400">Cómo funciona</a>
+                <a href="choferes.html" class="hover:text-orange-400">Choferes</a>
+                <a href="testimonios.html" class="hover:text-orange-400">Testimonios</a>
+                <a href="descarga.html" class="bg-orange-500 px-5 py-2 rounded-full font-bold hover:bg-orange-600">Descargar</a>
+            </div>
+
+            <!-- Botón Hamburguesa -->
+            <button id="menuBtn" class="md:hidden text-white text-3xl">☰</button>
         </div>
-        <a href="descarga.html" class="bg-orange-500 px-6 py-2 rounded-full font-bold hover:bg-orange-600">Descargar gratis</a>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobileMenu" class="hidden md:hidden flex flex-col space-y-4 mt-4 text-center border-t border-slate-700 pt-4">
+            <a href="index.html" class="block">Inicio</a>
+            <a href="presentacion.html" class="block">Presentación</a>
+            <a href="caracteristicas.html" class="block">Características</a>
+            <a href="comofunciona.html" class="block text-orange-400 font-bold">Cómo funciona</a>
+            <a href="choferes.html" class="block">Choferes</a>
+            <a href="testimonios.html" class="block">Testimonios</a>
+            <a href="descarga.html" class="block bg-orange-500 py-2 rounded-full font-bold mx-8">Descargar</a>
+        </div>
     </nav>
 
     <!-- SECCIÓN CÓMO FUNCIONA -->
@@ -32,44 +51,34 @@
             <button id="btnChofer" onclick="showContent('chofer')" class="px-8 py-2 rounded-lg font-bold text-gray-500 hover:text-black">Soy chofer</button>
         </div>
 
-        <!-- CONTENEDOR PASAJERO (image_c53461.png) -->
-        <div id="contentPasajero" class="max-w-6xl mx-auto px-12 grid grid-cols-4 gap-8 relative">
-            <div class="absolute top-12 left-20 right-20 h-0.5 bg-orange-200 -z-10"></div>
-            <!-- Paso 1 -->
-            <div class="flex flex-col items-center">
-                <div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative">
-                    <span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">1</span>⬇️
-                </div>
-                <h3 class="font-bold mb-2">Descarga la app</h3>
-                <p class="text-sm text-gray-500">Disponible gratis en App Store y Google Play. Registro en menos de 2 minutos.</p>
-            </div>
-            <!-- Repite bloques para pasos 2, 3, 4 con info de pasajero -->
+        <!-- CONTENEDOR PASAJERO -->
+        <div id="contentPasajero" class="max-w-6xl mx-auto px-12 grid md:grid-cols-4 gap-8 relative">
+            <div class="hidden md:block absolute top-12 left-20 right-20 h-0.5 bg-orange-200 -z-10"></div>
+            <!-- Pasos... -->
+            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative"><span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">1</span>⬇️</div><h3 class="font-bold mb-2">Descarga la app</h3><p class="text-sm text-gray-500">Disponible gratis en App Store y Google Play. Registro en menos de 2 minutos.</p></div>
             <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative"><span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">2</span>🔍</div><h3 class="font-bold mb-2">Busca tu ruta</h3><p class="text-sm text-gray-500">Escribe tu origen y destino. La app te muestra todos los buses disponibles en tiempo real.</p></div>
             <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative"><span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">3</span>🚌</div><h3 class="font-bold mb-2">Aborda y viaja</h3><p class="text-sm text-gray-500">Muestra tu código QR al chofer, aborda y sigue tu viaje desde el mapa interactivo.</p></div>
             <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative"><span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">4</span>✅</div><h3 class="font-bold mb-2">Califica tu viaje</h3><p class="text-sm text-gray-500">Al llegar, califica al chofer y el servicio. Tu opinión mejora la experiencia para todos.</p></div>
         </div>
 
-        <!-- CONTENEDOR CHOFER (image_c53459.png) -->
-        <div id="contentChofer" class="max-w-6xl mx-auto px-12 grid grid-cols-4 gap-8 relative hidden">
-            <div class="absolute top-12 left-20 right-20 h-0.5 bg-orange-200 -z-10"></div>
-            <!-- Paso 1 -->
-            <div class="flex flex-col items-center">
-                <div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative">
-                    <span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">1</span>⬇️
-                </div>
-                <h3 class="font-bold mb-2">Crea tu cuenta</h3>
-                <p class="text-sm text-gray-500">Regístrate con tu licencia y documentos. Verificación rápida en menos de 24 horas.</p>
-            </div>
-            <!-- Repite bloques para pasos 2, 3, 4 con info de chofer -->
+        <!-- CONTENEDOR CHOFER -->
+        <div id="contentChofer" class="max-w-6xl mx-auto px-12 grid md:grid-cols-4 gap-8 relative hidden">
+            <div class="hidden md:block absolute top-12 left-20 right-20 h-0.5 bg-orange-200 -z-10"></div>
+            <!-- Pasos Chofer... -->
+            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative"><span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">1</span>⬇️</div><h3 class="font-bold mb-2">Crea tu cuenta</h3><p class="text-sm text-gray-500">Regístrate con tu licencia y documentos. Verificación rápida en menos de 24 horas.</p></div>
             <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative"><span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">2</span>🔍</div><h3 class="font-bold mb-2">Configura tu ruta</h3><p class="text-sm text-gray-500">Define tu ruta, horario y capacidad. La app te gestiona automáticamente las reservas.</p></div>
             <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative"><span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">3</span>🚌</div><h3 class="font-bold mb-2">Acepta pasajeros</h3><p class="text-sm text-gray-500">Confirma viajes desde la app. El sistema te notifica con anticipación para cada parada.</p></div>
             <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative"><span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">4</span>✅</div><h3 class="font-bold mb-2">Recibe tus pagos</h3><p class="text-sm text-gray-500">Los cobros se procesan automáticamente. Retira a tu cuenta bancaria cuando quieras.</p></div>
         </div>
     </section>
 
-    
-
     <script>
+        // Lógica menú hamburguesa
+        const btn = document.getElementById('menuBtn');
+        const menu = document.getElementById('mobileMenu');
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+
+        // Lógica switcher
         function showContent(type) {
             const btnP = document.getElementById('btnPasajero');
             const btnC = document.getElementById('btnChofer');
@@ -90,5 +99,4 @@
         }
     </script>
 </body>
-
 </html>
