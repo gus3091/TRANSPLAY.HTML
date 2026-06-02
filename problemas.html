@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Reporte de Rutas | Transplayy</title>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <nav class="bg-[#0B172A] p-6 text-white">
+        <div class="flex justify-between items-center max-w-7xl mx-auto">
+            <div class="text-2xl font-bold">Transplayy</div>
+            <a href="index.html" class="text-sm hover:text-orange-400 font-bold">← Volver al inicio</a>
+        </div>
+    </nav>
+
+    <header class="bg-red-700 text-white py-12 text-center">
+        <h1 class="text-4xl font-bold">Estado de Rutas y Conflictos</h1>
+        <p class="mt-2 text-red-100">Información en tiempo real sobre bloqueos y manifestaciones en Bolivia</p>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+        
+        <h2 class="text-2xl font-bold mb-6 border-l-4 border-red-600 pl-4">Videos de la situación actual</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="aspect-video bg-black rounded-xl overflow-hidden shadow-lg">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/GZFTkiu4rJE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="aspect-video bg-black rounded-xl overflow-hidden shadow-lg">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/nWPC8UKqypI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <h2 class="text-2xl font-bold mb-6 border-l-4 border-red-600 pl-4">Registro fotográfico</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            
+            <div class="bg-white p-2 rounded-xl shadow-sm border cursor-pointer hover:shadow-md transition" onclick="openModal('img3/bloqueo1.png')">
+                <img src="img3/bloqueo1.png" alt="Manifestación" class="w-full h-48 object-cover rounded-lg">
+                <p class="p-3 text-sm font-semibold">Cochabamba - bloqueos por trasportistas </p>
+            </div>
+
+            <div class="bg-white p-2 rounded-xl shadow-sm border cursor-pointer hover:shadow-md transition" onclick="openModal('img3/bloqueo2.png')">
+                <img src="img3/bloqueo2.png" alt="Bloqueo" class="w-full h-48 object-cover rounded-lg">
+                <p class="p-3 text-sm font-semibold">Carretera al Oriente por el aumento de repuestos</p>
+            </div>
+
+            <div class="bg-white p-2 rounded-xl shadow-sm border cursor-pointer hover:shadow-md transition" onclick="openModal('img3/bloqueo3.png')">
+                <img src="img3/bloqueo3.png" alt="Caos vehicular" class="w-full h-48 object-cover rounded-lg">
+                <p class="p-3 text-sm font-semibold">Punto de control sindical y peleas entre sindicatos </p>
+            </div>
+        </div>
+    </main>
+
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 hidden z-50 flex items-center justify-center p-4 cursor-pointer" onclick="closeModal()">
+        <img id="modalImg" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl" src="" alt="Imagen ampliada">
+    </div>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('imageModal').classList.remove('hidden');
+        }
+        function closeModal() {
+            document.getElementById('imageModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
