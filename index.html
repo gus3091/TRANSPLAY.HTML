@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Transplayy | Inicio</title>
+</head>
+<body class="bg-[#0B172A] text-white font-sans">
+
+    <nav class="flex justify-between items-center py-6 px-12">
+        <div class="text-2xl font-bold flex items-center gap-2">🚌 transplayy</div>
+        <div class="space-x-8 text-sm font-medium opacity-80">
+            <a href="index.html">Inicio</a>
+            <a href="caracteristicas.html">Características</a>
+            <a href="comofunciona.html">Cómo funciona</a>
+            <a href="choferes.html">Choferes</a>
+            <a href="testimonios.html">Testimonios</a>
+        </div>
+        <a href="http://192.168.1.6:8080/descarga.html" class="bg-orange-500 px-6 py-2 rounded-full font-bold">Descargar</a>
+    </nav>
+
+    <section class="max-w-7xl mx-auto px-12 py-16">
+        <div class="inline-flex bg-[#16273e] p-1 rounded-full mb-12 border border-slate-700">
+            <button id="btnPasajero" onclick="cambiarModo('pasajero')" class="px-8 py-2 rounded-full bg-orange-500 font-bold transition-all duration-300 shadow-lg">Soy pasajero</button>
+            <button id="btnChofer" onclick="cambiarModo('chofer')" class="px-8 py-2 rounded-full font-bold opacity-60 hover:opacity-100 transition-all duration-300">Soy chofer</button>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div id="heroContent">
+                <span id="heroBadge" class="text-orange-500 font-bold tracking-widest text-sm mb-4 block">TU TRANSPORTE IDEAL</span>
+                <h1 id="heroTitle" class="text-6xl font-bold mb-6 leading-tight">Viaja cómodo, <br>llega seguro.</h1>
+                <p id="heroDesc" class="text-gray-400 text-lg mb-8">Sigue tu bus en el mapa en tiempo real, paga sin efectivo y llega a donde necesitas sin estrés.</p>
+                <a href="http://192.168.1.6:8080/descarga.html" id="btnCta" class="inline-block bg-orange-500 px-8 py-4 rounded-xl font-bold hover:bg-orange-600 transition text-center">Descargar App Gratis</a>
+            </div>
+            
+            <div class="flex justify-center relative">
+                <div class="w-72 h-[500px] bg-slate-800 rounded-[3rem] border-4 border-slate-700 overflow-hidden shadow-2xl relative z-10">
+                    <img id="appImage" src="img/pasajero.png" alt="App Preview" class="w-full h-full object-cover transition-all duration-500">
+                </div>
+                <div class="absolute w-80 h-80 bg-orange-500/20 rounded-full blur-3xl -z-0"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#080f1a] text-gray-400 py-16 px-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="space-y-4">
+                <div class="text-2xl font-bold text-white flex items-center gap-2">🚌 transplayy</div>
+                <p class="text-sm leading-relaxed">Conectando pasajeros y choferes en toda Latinoamérica.</p>
+                <div class="space-y-2 text-sm">
+                    <p>✉️ hola@transplayy.app</p>
+                    <p>📞 +57 (601) 234-5678</p>
+                    <p>📍 Bogotá, Colombia</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Producto</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="caracteristicas.html" class="hover:text-orange-500">Características</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Empresa</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-orange-500">Sobre nosotros</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Soporte</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-orange-500">Centro de ayuda</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function cambiarModo(modo) {
+            const btnP = document.getElementById('btnPasajero');
+            const btnC = document.getElementById('btnChofer');
+            const title = document.getElementById('heroTitle');
+            const desc = document.getElementById('heroDesc');
+            const cta = document.getElementById('btnCta');
+            const badge = document.getElementById('heroBadge');
+            const appImg = document.getElementById('appImage');
+
+            if(modo === 'pasajero') {
+                btnP.className = "px-8 py-2 rounded-full bg-orange-500 font-bold transition-all shadow-lg";
+                btnC.className = "px-8 py-2 rounded-full font-bold opacity-60 hover:opacity-100 transition-all";
+                title.innerHTML = "Viaja cómodo, <br>llega seguro.";
+                desc.innerHTML = "Sigue tu bus en el mapa en tiempo real, paga sin efectivo y llega a donde necesitas sin estrés.";
+                cta.className = "inline-block bg-orange-500 px-8 py-4 rounded-xl font-bold hover:bg-orange-600 transition text-center";
+                badge.className = "text-orange-500 font-bold tracking-widest text-sm mb-4 block";
+                appImg.src = "img/pasajero.png"; 
+            } else {
+                btnC.className = "px-8 py-2 rounded-full bg-green-500 font-bold transition-all shadow-lg";
+                btnP.className = "px-8 py-2 rounded-full font-bold opacity-60 hover:opacity-100 transition-all";
+                title.innerHTML = "Tu trabajo, <br>dignificado.";
+                desc.innerHTML = "Gestiona tus rutas, recibe pagos automáticos y aumenta tus ingresos un 30% más cada mes.";
+                cta.className = "inline-block bg-green-500 px-8 py-4 rounded-xl font-bold hover:bg-green-600 transition text-center";
+                badge.className = "text-green-500 font-bold tracking-widest text-sm mb-4 block";
+                appImg.src = "img/chofer.png"; 
+            }
+        }
+    </script>
+</body>
+</html>
