@@ -2,101 +2,117 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Transplayy | Cómo funciona</title>
 </head>
 <body class="bg-[#FCFCFA] text-[#0B172A] font-sans">
 
-    <!-- NAVBAR ACTUALIZADO -->
     <nav class="bg-[#0B172A] p-6 text-white">
         <div class="flex justify-between items-center max-w-7xl mx-auto">
             <div class="text-2xl font-bold">Transplayy</div>
-
-            <!-- Menú Escritorio -->
             <div class="hidden md:flex space-x-6 text-sm font-medium items-center">
                 <a href="index.html" class="hover:text-orange-400">Inicio</a>
-                <a href="presentacion.html" class="hover:text-orange-400">Presentación</a>
-                <a href="caracteristicas.html" class="hover:text-orange-400">Características</a>
                 <a href="comofunciona.html" class="text-orange-400 font-bold border-b border-orange-400">Cómo funciona</a>
-                <a href="choferes.html" class="hover:text-orange-400">Choferes</a>
-                <a href="testimonios.html" class="hover:text-orange-400">Testimonios</a>
                 <a href="descarga.html" class="bg-orange-500 px-5 py-2 rounded-full font-bold hover:bg-orange-600">Descargar</a>
             </div>
-
-            <!-- Botón Hamburguesa -->
-            <button id="menuBtn" class="md:hidden text-white text-3xl">☰</button>
-        </div>
-
-        <!-- Menú Desplegable Móvil -->
-        <div id="mobileMenu" class="hidden md:hidden flex flex-col space-y-4 mt-4 text-center border-t border-slate-700 pt-4">
-            <a href="index.html" class="block">Inicio</a>
-            <a href="presentacion.html" class="block">Presentación</a>
-            <a href="caracteristicas.html" class="block">Características</a>
-            <a href="comofunciona.html" class="block text-orange-400 font-bold">Cómo funciona</a>
-            <a href="choferes.html" class="block">Choferes</a>
-            <a href="testimonios.html" class="block">Testimonios</a>
-            <a href="descarga.html" class="block bg-orange-500 py-2 rounded-full font-bold mx-8">Descargar</a>
         </div>
     </nav>
 
-    <!-- SECCIÓN CÓMO FUNCIONA -->
     <section class="py-20 text-center">
-        <span class="text-orange-400 font-bold bg-orange-50 px-4 py-1 rounded-full text-sm">¿Cómo funciona?</span>
-        <h1 class="text-5xl font-bold mt-6 mb-4">Simple desde el primer minuto</h1>
-        <p class="text-gray-600 mb-12">Tanto si eres pasajero como chofer, empezar con Transplayy es sencillo y rápido.</p>
+        <h1 class="text-5xl font-bold mb-12">Cómo funciona Transplayy</h1>
 
-        <!-- SWITCHER -->
-        <div class="inline-flex bg-gray-100 p-1 rounded-xl mb-20 cursor-pointer">
+        <div class="inline-flex bg-gray-100 p-1 rounded-xl mb-12 cursor-pointer">
             <button id="btnPasajero" onclick="showContent('pasajero')" class="px-8 py-2 rounded-lg font-bold bg-[#0B172A] text-white">Soy pasajero</button>
             <button id="btnChofer" onclick="showContent('chofer')" class="px-8 py-2 rounded-lg font-bold text-gray-500 hover:text-black">Soy chofer</button>
         </div>
 
-        <!-- CONTENEDOR PASAJERO -->
-        <div id="contentPasajero" class="max-w-6xl mx-auto px-12 grid md:grid-cols-4 gap-8 relative">
-            <div class="hidden md:block absolute top-12 left-20 right-20 h-0.5 bg-orange-200 -z-10"></div>
-            <!-- Pasos... -->
-            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative"><span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">1</span>⬇️</div><h3 class="font-bold mb-2">Descarga la app</h3><p class="text-sm text-gray-500">Disponible gratis en App Store y Google Play. Registro en menos de 2 minutos.</p></div>
-            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative"><span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">2</span>🔍</div><h3 class="font-bold mb-2">Busca tu ruta</h3><p class="text-sm text-gray-500">Escribe tu origen y destino. La app te muestra todos los buses disponibles en tiempo real.</p></div>
-            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative"><span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">3</span>🚌</div><h3 class="font-bold mb-2">Aborda y viaja</h3><p class="text-sm text-gray-500">Muestra tu código QR al chofer, aborda y sigue tu viaje desde el mapa interactivo.</p></div>
-            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative"><span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">4</span>✅</div><h3 class="font-bold mb-2">Califica tu viaje</h3><p class="text-sm text-gray-500">Al llegar, califica al chofer y el servicio. Tu opinión mejora la experiencia para todos.</p></div>
+        <div id="contentPasajero" class="max-w-6xl mx-auto px-12 grid md:grid-cols-4 gap-8 mb-20">
+            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm">⬇️</div><h3 class="font-bold mb-2">Descarga</h3><p class="text-sm text-gray-500">Registro en menos de 2 minutos.</p></div>
+            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm">🔍</div><h3 class="font-bold mb-2">Busca ruta</h3><p class="text-sm text-gray-500">Buses en tiempo real.</p></div>
+            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm">🚌</div><h3 class="font-bold mb-2">Aborda</h3><p class="text-sm text-gray-500">QR y mapa interactivo.</p></div>
+            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm">✅</div><h3 class="font-bold mb-2">Califica</h3><p class="text-sm text-gray-500">Mejora la experiencia.</p></div>
         </div>
 
-        <!-- CONTENEDOR CHOFER -->
-        <div id="contentChofer" class="max-w-6xl mx-auto px-12 grid md:grid-cols-4 gap-8 relative hidden">
-            <div class="hidden md:block absolute top-12 left-20 right-20 h-0.5 bg-orange-200 -z-10"></div>
-            <!-- Pasos Chofer... -->
-            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative"><span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">1</span>⬇️</div><h3 class="font-bold mb-2">Crea tu cuenta</h3><p class="text-sm text-gray-500">Regístrate con tu licencia y documentos. Verificación rápida en menos de 24 horas.</p></div>
-            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative"><span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">2</span>🔍</div><h3 class="font-bold mb-2">Configura tu ruta</h3><p class="text-sm text-gray-500">Define tu ruta, horario y capacidad. La app te gestiona automáticamente las reservas.</p></div>
-            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative"><span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">3</span>🚌</div><h3 class="font-bold mb-2">Acepta pasajeros</h3><p class="text-sm text-gray-500">Confirma viajes desde la app. El sistema te notifica con anticipación para cada parada.</p></div>
-            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm relative"><span class="absolute -top-2 -right-2 bg-orange-400 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center font-bold">4</span>✅</div><h3 class="font-bold mb-2">Recibe tus pagos</h3><p class="text-sm text-gray-500">Los cobros se procesan automáticamente. Retira a tu cuenta bancaria cuando quieras.</p></div>
+        <div id="contentChofer" class="max-w-6xl mx-auto px-12 grid md:grid-cols-4 gap-8 mb-20 hidden">
+            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm">👤</div><h3 class="font-bold mb-2">Crea cuenta</h3><p class="text-sm text-gray-500">Verificación rápida.</p></div>
+            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm">⚙️</div><h3 class="font-bold mb-2">Configura</h3><p class="text-sm text-gray-500">Define tus rutas.</p></div>
+            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm">🔔</div><h3 class="font-bold mb-2">Acepta</h3><p class="text-sm text-gray-500">Notificaciones en vivo.</p></div>
+            <div class="flex flex-col items-center"><div class="w-20 h-20 bg-white border border-gray-100 rounded-3xl flex items-center justify-center text-2xl mb-6 shadow-sm">💰</div><h3 class="font-bold mb-2">Recibe pagos</h3><p class="text-sm text-gray-500">Gestión automática.</p></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 mt-10">
+            <h2 id="galleryTitle" class="text-2xl font-bold mb-8">Interfaz para Pasajeros</h2>
+            <div id="galleryContainer" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6"></div>
         </div>
     </section>
 
-    <script>
-        // Lógica menú hamburguesa
-        const btn = document.getElementById('menuBtn');
-        const menu = document.getElementById('mobileMenu');
-        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-95 hidden z-[9999] flex items-center justify-center p-4 cursor-pointer" onclick="closeModal()">
+        <img id="modalImg" class="max-w-[95vw] max-h-[90vh] object-contain rounded-lg shadow-2xl" src="" alt="Imagen ampliada">
+    </div>
 
-        // Lógica switcher
+    <script>
+        const galeria = {
+            pasajero: [
+                { src: "img4/p1.png", desc: "Interfaz P1" }, { src: "img4/p2.png", desc: "Interfaz P2" },
+                { src: "img4/p3.png", desc: "Interfaz P3" }, { src: "img4/p4.png", desc: "Interfaz P4" },
+                { src: "img4/p5.png", desc: "Interfaz P5" }, { src: "img4/p6.png", desc: "Interfaz P6" },
+                { src: "img4/p7.png", desc: "Interfaz P7" }, 
+            ],
+            chofer: [
+                { src: "img4/c1.png", desc: "Interfaz C1" }, { src: "img4/c2.png", desc: "Interfaz C2" },
+                { src: "img4/c3.png", desc: "Interfaz C3" }, { src: "img4/c4.png", desc: "Interfaz C4" },
+                { src: "img4/c5.png", desc: "Interfaz C5" }, { src: "img4/c6.png", desc: "Interfaz C6" },
+                
+            ]
+        };
+
         function showContent(type) {
+            // Lógica de botones y pasos
             const btnP = document.getElementById('btnPasajero');
             const btnC = document.getElementById('btnChofer');
             const contentP = document.getElementById('contentPasajero');
             const contentC = document.getElementById('contentChofer');
+            const galleryContainer = document.getElementById('galleryContainer');
+            const galleryTitle = document.getElementById('galleryTitle');
 
             if(type === 'pasajero') {
                 contentP.classList.remove('hidden');
                 contentC.classList.add('hidden');
                 btnP.className = "px-8 py-2 rounded-lg font-bold bg-[#0B172A] text-white";
                 btnC.className = "px-8 py-2 rounded-lg font-bold text-gray-500 hover:text-black";
+                galleryTitle.innerText = "Interfaz para Pasajeros";
             } else {
                 contentP.classList.add('hidden');
                 contentC.classList.remove('hidden');
                 btnC.className = "px-8 py-2 rounded-lg font-bold bg-[#0B172A] text-white";
                 btnP.className = "px-8 py-2 rounded-lg font-bold text-gray-500 hover:text-black";
+                galleryTitle.innerText = "Interfaz para Choferes";
             }
+
+            // Renderizar galería
+            galleryContainer.innerHTML = '';
+            galeria[type].forEach(item => {
+                galleryContainer.innerHTML += `
+                    <div class="bg-white p-3 rounded-2xl shadow-sm border cursor-pointer hover:shadow-lg transition" onclick="openModal('${item.src}')">
+                        <img src="${item.src}" class="w-full h-40 object-cover rounded-xl mb-3">
+                        <p class="text-sm font-semibold text-gray-700">${item.desc}</p>
+                    </div>
+                `;
+            });
         }
+
+        function openModal(src) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('imageModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            document.getElementById('imageModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        showContent('pasajero');
     </script>
 </body>
 </html>
